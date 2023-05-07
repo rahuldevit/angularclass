@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Product Details with NgSwitch Directive</h2>
+    <div class="btn-toolbar">
+        <div class="btn-group">
+            <button class="btn btn-warning" name="basic" (click)="ChangeTemplate($event)">Basic Details</button>
+            <button class="btn btn-warning" name="preview" (click)="ChangeTemplate($event)">Preview</button>
+            <button class="btn btn-warning" name="rating" (click)="ChangeTemplate($event)">Rating</button>
+            <button class="btn btn-warning" name="description" (click)="ChangeTemplate($event)">Description</button>
+        </div>
+    </div>
+    <div class="mt-3" [ngSwitch]="Template">
+         <div *ngSwitchCase="'basic'">
+            <h3>Product Title</h3>
+            <p>{{product.title}}</p>
+         </div>
+         <div *ngSwitchCase="'preview'">
+            <h3>Preview</h3>
+            <img [src]="product.image" width="200" height="200" alt="">
+         </div>
+         <div *ngSwitchCase="'rating'">
+            <h3>Price & Ratings</h3>
+            <dl>
+                <dt>Price</dt>
+                <dd>{{product.price}}</dd>
+                <dt>Ratings</dt>
+                <dd>
+                    <span class="bi bi-star-fill text-success"></span>
+                    {{product.rating.rate}} [{{product.rating.count}}]
+                </dd>
+            </dl>
+         </div>
+         <div *ngSwitchCase="'description'">
+            <h3>Description</h3>
+            <p>{{product.description}}</p>
+         </div>
+         <div *ngSwitchDefault="">
+            <h3>No information is available</h3>
+         </div>
+    </div>
+</div>

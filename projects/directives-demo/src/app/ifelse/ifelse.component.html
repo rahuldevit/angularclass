@@ -1,0 +1,35 @@
+<div class="container">
+
+    <h2>Product Details</h2>
+    <dl>
+        <dt>Name</dt>
+        <dd>{{product.Name}}</dd>
+        <dt>Price</dt>
+        <dd>{{product.Price}}</dd>
+        <dt>
+            <button class="btn btn-primary" (click)="ToggleButton()">{{btnText}}</button>
+        </dt>
+        <dd>
+            <div *ngIf="toggle;then Preview;else Description"></div>
+            <ng-template #Preview>
+                <img [src]="product.Image" height="200" width="200 " alt="">
+            </ng-template>
+            <ng-template #Description>
+                <p>{{product.Description}}</p>
+            </ng-template>
+        </dd>
+
+
+    </dl>
+
+
+    <!-- <div *ngIf="flag;then Success;else Fail"></div>
+    <ng-template #Success>
+        <h1>This is true block</h1>
+    
+    </ng-template>
+    <ng-template #Fail>
+        <h1>this is false block</h1>
+
+    </ng-template> -->
+</div>

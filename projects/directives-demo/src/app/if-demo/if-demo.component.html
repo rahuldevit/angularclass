@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <h2>Product Details</h2>
+    <dl>
+        <dt>Name</dt>
+        <dd>{{product.Name}}</dd>
+        <dt>Price</dt>
+        <dd>{{product.Price}}</dd>
+        <dt>Image</dt>
+        <dt>
+            <input type="checkbox" name="preview" [(ngModel)]="preview" id="">
+            {{preview == true ? "Hide":"Show"}}
+        </dt>
+        <dd *ngIf="preview">
+            <img [src]="product.Image" width="200" height="200" alt="">
+        </dd>
+
+        <!-- <dd>
+            <img [src]="product.Image" width="200" height="200" alt="">
+        </dd> -->
+    </dl>
+</div>
