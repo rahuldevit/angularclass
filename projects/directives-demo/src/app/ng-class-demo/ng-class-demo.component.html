@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <h2>Class Binding</h2>
+    <ul class="list-unstyled">
+
+        <!-- using MVVM Architecture -->
+
+        <!-- <li><input type="checkbox" ngModel #border="ngModel">Border</li>
+        <li><input type="checkbox" ngModel #background="ngModel">Background</li>
+        <li><input type="checkbox" ngModel #text="ngModel">Text</li> -->
+
+        <!-- Using MVC Architecture  -->
+        
+        <li><input type="checkbox" name="" [(ngModel)]="border" id="">Border</li>
+        <li><input type="checkbox" name="" [(ngModel)]="text" id="">Text</li>
+        <li><input type="checkbox" name="" [(ngModel)]="background" id="">Background</li>
+
+    </ul>
+    <h1 [ngClass]="'bg-style'">Rahul Kumar</h1>
+    <h1 [ngClass]="['bg-style','text-style','border-style']">Rahul Kumar</h1>
+    <h1 [ngClass]="{'bg-style':background,'text-style':text,'border-style':border}">Rahul Kumar</h1>
+</div>
