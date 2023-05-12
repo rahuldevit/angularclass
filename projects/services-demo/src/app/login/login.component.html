@@ -1,0 +1,16 @@
+<div class="container-fluid">
+     <div class="login-form">
+        <form>
+            <h2><span class="bi bi-person-fill"></span>User Login</h2>
+            <dl>
+                <dt>Username</dt>
+                <dd><input type="text" class="form-control"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" class="form-control"></dd>
+                <dt>Verify the code <button class="btn" (click)="NewOTP()"><span class="bi bi-arrow-clockwise"></span></button> </dt>
+                <dd>{{otp}}</dd>
+            </dl>
+            <button class="btn btn-primary w-100">Login</button>
+        </form>
+     </div>
+</div>
