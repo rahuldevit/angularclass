@@ -1,0 +1,13 @@
+.bg-style{
+    background-color: yellowgreen;
+}
+
+.text-style{
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+
+.border-style{
+    border: 2px solid red;
+}
