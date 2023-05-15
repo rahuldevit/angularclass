@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <h2>Custom Pipes Example</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>EmpID</th>
+                <th>Ename</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of emps">
+                <td>{{emp.empId}}</td>
+                <td>{{emp.empName | nametitle:emp.gender}}</td>
+                <td>{{emp.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
