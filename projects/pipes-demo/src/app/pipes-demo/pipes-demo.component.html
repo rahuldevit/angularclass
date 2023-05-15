@@ -1,0 +1,38 @@
+<div class="container">
+    <ol class="list-group">
+        <li class="list-group-item">{{name|uppercase }}</li>
+        <li class="list-group-item">{{name|lowercase}}</li>
+        <li class="list-group-item">{{name|titlecase}}</li>
+        <li class="list-group-item">{{price|number:'0.2'}}</li>
+        <li class="list-group-item">{{price|currency:'INR'}}</li>
+        <li class="list-group-item">{{mfg|date:'full'}}</li>
+        <li class="list-group-item">{{rate|percent}}</li>
+        <li class="list-group-item">{{product|json}}</li>
+        <li class="list-group-item">{{msg | slice:0.7}}</li>
+        <li *ngFor="let item of courses |keyvalue">
+            {{item.key}} --> {{item.value}}
+        </li>
+    </ol>
+
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Delivery Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{product.Name}}</td>
+                    <td>{{product.ShippedTo}}</td>
+                    <td>
+                        {{product.ShippedTo | i18nSelect:status}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

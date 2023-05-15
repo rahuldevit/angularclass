@@ -13,6 +13,8 @@ import { ForPropertiesComponent } from './for-properties/for-properties.componen
 import { ForTrackByComponent } from './for-track-by/for-track-by.component';
 import { NgClassDemoComponent } from './ng-class-demo/ng-class-demo.component';
 import { NgStyleDemoComponent } from './ng-style-demo/ng-style-demo.component';
+import { CustomDirComponent } from './custom-dir/custom-dir.component';
+import { CustomDireciveDirective } from './custom-direcive.directive';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,15 @@ import { NgStyleDemoComponent } from './ng-style-demo/ng-style-demo.component';
     ForPropertiesComponent,
     ForTrackByComponent,
     NgClassDemoComponent,
-    NgStyleDemoComponent
+    NgStyleDemoComponent,
+    CustomDirComponent,
+    CustomDireciveDirective
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [NgStyleDemoComponent]
+  bootstrap: [CustomDirComponent]
 })
 export class AppModule { }
