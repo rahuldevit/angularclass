@@ -1,0 +1,15 @@
+<div class="container p-4 bg-light-dark" style="height: 200px;">
+    <h3>Child Container</h3>
+    <p>{{msgFromParent}} <button (click)="ChildButtonClick()" >Msg to parent</button></p>
+    <hr>
+    <table border="2">
+        <tr>
+            <th>Student Id</th>
+            <th>Student Name</th>
+        </tr>
+        <tr *ngFor="let std of studentObj">
+            <td>{{std.stdId}}</td>
+            <td>{{std.stdName}}</td>
+        </tr>
+    </table>
+</div>
